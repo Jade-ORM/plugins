@@ -13,8 +13,11 @@ plugins/
 ├── docs/
 │   └── CONTRACT.md            # jade-plugin.json + setup/teardown contract
 └── official/
-    ├── cache/                 # example: thin wrapper over jade.cache
-    └── soft-delete/           # example: soft delete via hooks
+    ├── cache/                 # in-memory query cache
+    ├── soft-delete/           # soft delete via hooks
+    ├── timestamps/            # created_at / updated_at
+    ├── tenant/                # tenant_id injection
+    └── sql-log/               # SQL logging
 ```
 
 Community plugins live in their **own GitHub repos** and are listed in `registry.json` after review.
@@ -48,5 +51,8 @@ Jade.configure({
 |--------|-------------|
 | `cache` | In-memory query cache (wraps `jade.cache`) |
 | `soft-delete` | Soft delete via entity hooks |
+| `timestamps` | Auto `created_at` / `updated_at` |
+| `tenant` | Tenant id injection on create |
+| `sql-log` | SQL logging via `jade.log` |
 
 More official plugins ship as the ecosystem needs them — prefer plugins over bloating core.

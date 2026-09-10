@@ -1,0 +1,10 @@
+{
+  "name": "tenant",
+  "version": "0.1.0",
+  "description": "Automatic tenant_id injection on create (scope helper)",
+  "jade": ">=2.0.0",
+  "lua": ">=5.1",
+  "main": "init.lua",
+  "repository": "https://github.com/Jade-ORM/plugins",
+  "keywords": ["multi-tenant", "tenant_id"]
+}
