@@ -1,0 +1,10 @@
+{
+  "name": "encryption",
+  "version": "1.0.0",
+  "description": "Field-level encryption with database-native or custom algorithms",
+  "jade": ">=2.0.0",
+  "lua": ">=5.1",
+  "main": "init.lua",
+  "repository": "https://github.com/Jade-ORM/plugins",
+  "keywords": ["encryption", "aes", "field-level"]
+}

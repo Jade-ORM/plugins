@@ -1,10 +1,18 @@
 # Community plugins
 
-Community plugins are **not** vendored here. They live in their own GitHub repos and are indexed in [`registry.json`](../registry.json).
+Community plugins are **not** vendored here and are **not** listed in [`registry.json`](../registry.json) (official-only index).
+
+They live in **your own public GitHub repo** and are self-published on **Jade Docs → Plugins** after GitHub login. Do **not** open a PR in this repo to register a community plugin.
 
 ## Template
 
-Copy `template/` → your repo, implement `setup`/`teardown`, fill `jade-plugin.json`, then open a PR adding an entry to `registry.json`.
+Copy `template/` → your repo, implement `setup`/`teardown`, fill `jade-plugin.json`, then:
+
+1. Open **Jade Docs → Plugins → Submit**
+2. Sign in with GitHub
+3. Paste your repo URL
+
+Docs validates `jade-plugin.json` and lists the plugin under Community.
 
 ```lua
 -- src/init.lua

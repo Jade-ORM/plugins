@@ -1,0 +1,10 @@
+{
+  "name": "optimistic-lock",
+  "version": "1.0.0",
+  "description": "Optimistic concurrency control with version column",
+  "jade": ">=2.0.0",
+  "lua": ">=5.1",
+  "main": "init.lua",
+  "repository": "https://github.com/Jade-ORM/plugins",
+  "keywords": ["optimistic-lock", "version", "concurrency"]
+}

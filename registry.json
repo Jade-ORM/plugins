@@ -1,5 +1,5 @@
 {
-  "updated_at": "2026-09-10T16:30:00Z",
+  "updated_at": "2026-09-10T18:00:00Z",
   "scope": "official-only",
   "note": "Community plugins are not listed here. They are self-registered on Jade Docs (GitHub login). This file is the official index for docs + future esmeralda add.",
   "official": [
@@ -41,6 +41,30 @@
       "description": "Log SQL queries through jade.log",
       "path": "official/sql-log",
       "core_module": "jade.plugin.sql_log",
+      "jade": ">=2.0.0"
+    },
+    {
+      "name": "optimistic-lock",
+      "version": "1.0.0",
+      "description": "Optimistic concurrency control with version column",
+      "path": "official/optimistic-lock",
+      "core_module": "jade.plugin.optimistic_lock",
+      "jade": ">=2.0.0"
+    },
+    {
+      "name": "audit",
+      "version": "1.0.0",
+      "description": "Audit trail logging for entity CRUD operations",
+      "path": "official/audit",
+      "core_module": "jade.plugin.audit",
+      "jade": ">=2.0.0"
+    },
+    {
+      "name": "encryption",
+      "version": "1.0.0",
+      "description": "Field-level encryption with database-native or custom algorithms",
+      "path": "official/encryption",
+      "core_module": "jade.plugin.encryption",
       "jade": ">=2.0.0"
     }
   ]

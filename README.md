@@ -25,7 +25,10 @@ plugins/
     ├── soft-delete/
     ├── timestamps/
     ├── tenant/
-    └── sql-log/
+    ├── sql-log/
+    ├── optimistic-lock/
+    ├── audit/
+    └── encryption/
 ```
 
 ## Using a plugin
@@ -63,3 +66,6 @@ No PR to `Jade-ORM/plugins`. Your repo stays yours; you bump versions and push a
 | `timestamps` | Auto `created_at` / `updated_at` |
 | `tenant` | Tenant id on create |
 | `sql-log` | SQL logging via `jade.log` |
+| `optimistic-lock` | Version-based conflict detection |
+| `audit` | CRUD audit trail |
+| `encryption` | Field-level encryption |
