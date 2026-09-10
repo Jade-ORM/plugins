@@ -1,5 +1,7 @@
 {
   "updated_at": "2026-09-10T16:30:00Z",
+  "scope": "official-only",
+  "note": "Community plugins are not listed here. They are self-registered on Jade Docs (GitHub login). This file is the official index for docs + future esmeralda add.",
   "official": [
     {
       "name": "cache",
@@ -41,6 +43,5 @@
       "core_module": "jade.plugin.sql_log",
       "jade": ">=2.0.0"
     }
-  ],
-  "community": []
+  ]
 }

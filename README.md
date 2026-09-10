@@ -1,26 +1,32 @@
 # Jade Plugins
 
-Official and community plugins for [Jade ORM](https://github.com/Jade-ORM/jade-orm-core).
+Official plugins for [Jade ORM](https://github.com/Jade-ORM/jade-orm-core).
 
-Plugins are the **user customization surface** for Jade — not a dumping ground for core features. See [ALINHAMENTO §6](https://github.com/Jade-ORM/jade-orm-core) philosophy in the core docs.
+Plugins are the **user customization surface** for Jade — not a dumping ground for core features.
+
+## This repo is for **official** plugins only
+
+| Who | Where |
+|-----|--------|
+| **Official** (Jade-ORM) | This repo — code + `registry.json` |
+| **Community** (anyone) | **Your own GitHub repo** + register on **Jade Docs** (login) |
+
+Community authors **do not** open a PR here. Create the plugin in your repo, then add it from the docs site after signing in.
 
 ## Layout
 
 ```
 plugins/
 ├── README.md
-├── registry.json              # index for docs + esmeralda add (future)
-├── docs/
-│   └── CONTRACT.md            # jade-plugin.json + setup/teardown contract
+├── registry.json              # official index only
+├── docs/CONTRACT.md           # plugin interface + jade-plugin.json
 └── official/
-    ├── cache/                 # in-memory query cache
-    ├── soft-delete/           # soft delete via hooks
-    ├── timestamps/            # created_at / updated_at
-    ├── tenant/                # tenant_id injection
-    └── sql-log/               # SQL logging
+    ├── cache/
+    ├── soft-delete/
+    ├── timestamps/
+    ├── tenant/
+    └── sql-log/
 ```
-
-Community plugins live in their **own GitHub repos** and are listed in `registry.json` after review.
 
 ## Using a plugin
 
@@ -29,30 +35,31 @@ local Jade = require("jade")
 
 Jade.use(require("jade.plugin.cache"), { ttl = 600 })
 
--- or via config
 Jade.configure({
     database = { ... },
     plugins = {
         { name = "cache", ttl = 600 },
+        { name = "timestamps" },
     }
 })
 ```
 
-## Publishing a community plugin
+## Community plugins (self-publish)
 
-1. Create a public GitHub repo with a Lua module that implements the contract (`name`, `version`, `setup`).
-2. Add a `jade-plugin.json` at the repo root.
-3. Open a PR here updating `registry.json` (name, repo, description, compat).
-4. After review it appears on Jade Docs → Plugins.
+1. Create a **public GitHub repo** with a Lua module implementing `name`, `version`, `setup`.
+2. Put a **`jade-plugin.json`** at the repo root (see [CONTRACT.md](docs/CONTRACT.md)).
+3. Open **Jade Docs → Plugins → Submit** (or **Add plugin**).
+4. **Sign in with GitHub** and paste your repo URL.
+5. Docs validates `jade-plugin.json` and lists the plugin under Community.
+
+No PR to `Jade-ORM/plugins`. Your repo stays yours; you bump versions and push as usual.
 
 ## Official plugins
 
 | Plugin | Description |
 |--------|-------------|
-| `cache` | In-memory query cache (wraps `jade.cache`) |
+| `cache` | In-memory query cache |
 | `soft-delete` | Soft delete via entity hooks |
 | `timestamps` | Auto `created_at` / `updated_at` |
-| `tenant` | Tenant id injection on create |
+| `tenant` | Tenant id on create |
 | `sql-log` | SQL logging via `jade.log` |
-
-More official plugins ship as the ecosystem needs them — prefer plugins over bloating core.

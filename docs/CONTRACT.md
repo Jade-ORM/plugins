@@ -39,4 +39,5 @@ Every Jade plugin is a Lua table/module.
 - Errors raised from plugins must use `jade.errors` (`J####`) when talking to the runtime.
 - English-only messages in the plugin Lua surface.
 - Do not require modules that are not declared in the plugin README.
-- Official plugins live under `official/`; community plugins stay in external repos.
+- **Official** plugins live under `official/` in this repo (maintained by Jade-ORM).
+- **Community** plugins stay in **external GitHub repos** and are listed on Jade Docs after self-registration (GitHub login). Do not open a PR here to list a community plugin.
