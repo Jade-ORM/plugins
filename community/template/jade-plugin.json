@@ -1,0 +1,10 @@
+{
+  "name": "my-plugin",
+  "version": "0.1.0",
+  "description": "Short description",
+  "jade": ">=2.0.0",
+  "lua": ">=5.1",
+  "main": "src/init.lua",
+  "repository": "https://github.com/you/jade-plugin-my-plugin",
+  "keywords": []
+}

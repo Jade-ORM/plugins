@@ -1,0 +1,10 @@
+{
+  "name": "soft-delete",
+  "version": "1.0.0",
+  "description": "Soft delete via entity hooks",
+  "jade": ">=1.6.0",
+  "lua": ">=5.1",
+  "main": "init.lua",
+  "repository": "https://github.com/Jade-ORM/plugins",
+  "keywords": ["soft-delete", "deleted_at"]
+}

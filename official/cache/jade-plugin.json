@@ -1,0 +1,10 @@
+{
+  "name": "cache",
+  "version": "1.0.0",
+  "description": "In-memory query result cache with TTL",
+  "jade": ">=1.6.0",
+  "lua": ">=5.1",
+  "main": "init.lua",
+  "repository": "https://github.com/Jade-ORM/plugins",
+  "keywords": ["cache", "ttl"]
+}

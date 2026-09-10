@@ -1,0 +1,23 @@
+{
+  "$schema": "./docs/registry.schema.json",
+  "updated_at": "2026-09-10T00:00:00Z",
+  "official": [
+    {
+      "name": "cache",
+      "version": "1.0.0",
+      "description": "In-memory query result cache with TTL",
+      "path": "official/cache",
+      "core_module": "jade.plugin.cache",
+      "jade": ">=1.6.0"
+    },
+    {
+      "name": "soft-delete",
+      "version": "1.0.0",
+      "description": "Soft delete via entity hooks",
+      "path": "official/soft-delete",
+      "core_module": "jade.plugin.soft_delete",
+      "jade": ">=1.6.0"
+    }
+  ],
+  "community": []
+}
